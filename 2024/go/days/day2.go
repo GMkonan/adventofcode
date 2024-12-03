@@ -3,7 +3,6 @@ package day
 import (
 	"aoc/2024/utils"
 	"bufio"
-	"fmt"
 	"log"
 	"os"
 	"strconv"
@@ -52,7 +51,6 @@ func SafeCheck(ns []int) bool {
 func SafeCheckDamped(levelInts []int) bool {
 
 	for i := range levelInts {
-		fmt.Println(levelInts)
 		if SafeCheck(utils.RemoveElementFromSlice(levelInts, i)) {
 			return true
 		}
@@ -66,12 +64,8 @@ func Two() (int64, int64) {
 	file, err := os.Open("input/02.txt")
 	if err != nil {
 		log.Fatal(err)
+		return 0, 0
 	}
-	defer func() {
-		if err = file.Close(); err != nil {
-			log.Fatal(err)
-		}
-	}()
 
 	scanner := bufio.NewScanner(file)
 
