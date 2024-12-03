@@ -1,0 +1,10 @@
+*
+!*.*
+!*/
+*.txt
+
+# haskell
+*.hi
+*.o
+
+.DS_Store
