@@ -10,6 +10,7 @@ func main() {
 		1: day.One,
 		2: day.Two,
 		3: day.Three,
+		4: day.Four,
 	}
 
 	// oneA, oneB := days[1]()
@@ -19,7 +20,7 @@ func main() {
 	// fmt.Println(twoA)
 	// fmt.Println(twoB)
 
-	threeA, threeB := days[3]()
-	fmt.Println(threeA)
-	fmt.Println(threeB)
+	a, b := days[4]()
+	fmt.Println(a)
+	fmt.Println(b)
 }
