@@ -11,16 +11,11 @@ func main() {
 		2: day.Two,
 		3: day.Three,
 		4: day.Four,
+		5: day.Five,
 	}
 
-	// oneA, oneB := days[1]()
-	// fmt.Println(oneA)
-	// fmt.Println(oneB)
-	// twoA, twoB := days[2]()
-	// fmt.Println(twoA)
-	// fmt.Println(twoB)
-
-	a, b := days[4]()
+	// make this loop later
+	a, b := days[5]()
 	fmt.Println(a)
 	fmt.Println(b)
 }
