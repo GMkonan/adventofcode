@@ -1,5 +1,7 @@
 package day
 
+// https://www.reddit.com/r/adventofcode/comments/1h7mm3w/2024_day_05_part_2_how_nice_is_the_input_a_binary/
+
 import (
 	"fmt"
 	"os"
@@ -24,8 +26,6 @@ func checkRule(rule string, pages []string) int {
 
 func check(rules []Rule, pages []string) bool {
 	for _, rule := range rules {
-		// 75 | 23
-		// find left
 
 		fmt.Println(pages)
 		fmt.Println(rule.left, rule.right)
@@ -35,16 +35,11 @@ func check(rules []Rule, pages []string) bool {
 			continue
 		}
 
-		// if idx on the left is bigger
-
 		// check if its out of order
 		if leftIdx > rightIdx {
 			return false
 
 		}
-		// find right
-		// check if they are correct
-
 	}
 	return true
 }
@@ -70,30 +65,17 @@ func Five() (int64, int64) {
 		rules = append(rules, Rule{left: n[0], right: n[1]})
 	}
 
-	fmt.Println(rules)
 	var sum int
 	for _, p := range listOfPages {
 		rowOfPages := strings.Split(p, ",")
-		// [75, 23, 56]
 		if check(rules, rowOfPages) {
 			mn, _ := strconv.Atoi(rowOfPages[len(rowOfPages)/2])
 			fmt.Println(mn)
 			sum += mn
-		} else {
-			// reorder them
-			for _, n := range rules {
-				checkRule(n., rowOfPages)
-
-			}
 		}
 
 	}
 	fmt.Println(sum)
-	// try the inverrse logic
-	// apply rule to update line
-	// not line to the rule
 
-	// define sum = 0
-
-	return 0, 0
+	return int64(sum), 0
 }
